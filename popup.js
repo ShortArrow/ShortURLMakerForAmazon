@@ -4,22 +4,19 @@
 
 'use strict';
 
-let changeColor = document.getElementById('changeColor');
-chrome.storage.sync.get('color', function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.innerText='GetShortURL';
-});
-changeColor.onclick = function(element) {
-  let color = element.target.value;
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(
+let ids = ['ShowShortURL', 'GotoShortURL', 'CopyShortURL'];
+ids.forEach(ItemId => {
+  let ShortURL = document.getElementById(ItemId);
+  ShortURL.innerHTML = ItemId;
+  ShortURL.onclick = () => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.executeScript(
         tabs[0].id,
-        {file: 'contents.js'});
-  });
-  
-};
+        { file : ItemId +`.js`});
+    });
+  };
+});
 
 
 
-
-{/* <input type="hidden" id="ASIN" name="ASIN" value="B07WGJQMNN"></input> */}
+{/* <input type="hidden" id="ASIN" name="ASIN" value="B07WGJQMNN"></input> */ }
