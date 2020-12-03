@@ -1,10 +1,10 @@
 {
-  "name": "Short URL Maker for Amazon",
+  "name": "URL短縮ツール for Amazon",
   "version": "1.0",
   "description": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。",
   "manifest_version": 2,
   "default_locale":"ja",
-  "permissions": ["activeTab","declarativeContent","storage"],
+  "permissions": ["activeTab","declarativeContent"],
   "background":{
     "scripts": ["js/background.js"],
     "persistent": false
@@ -23,6 +23,5 @@
     "32": "img/get_started32.png",
     "48": "img/get_started48.png",
     "128": "img/get_started128.png"
-  },
-  "options_page": "options.html"
+  }
 }

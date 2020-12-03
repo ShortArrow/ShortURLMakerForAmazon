@@ -5,7 +5,7 @@
 'use strict';
 let ItemId=`CopyShortURL`
   let ShortURL = document.getElementById(ItemId);
-  ShortURL.innerHTML = ItemId;
+  ShortURL.innerText = ItemId;
   ShortURL.onclick = () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.executeScript(
