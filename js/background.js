@@ -50,6 +50,6 @@ function hello(url, callback) {
     else {
         let ShortURL = "https://www.amazon.co.jp/dp/" + ASIN;
         callback(ShortURL);
-        alert('「'+ShortURL+'」をクリップボードにコピーしました。');
+        // alert('「'+ShortURL+'」をクリップボードにコピーしました。');
     }
 }

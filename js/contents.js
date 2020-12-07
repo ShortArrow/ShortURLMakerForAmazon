@@ -4,7 +4,7 @@ chrome.runtime.sendMessage({
 },
     function (response) {
         if (response) {
-            // alert(response);
+            alert('「'+response+'」をクリップボードにコピーしました。');
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(response);
             }

@@ -1,6 +1,6 @@
 {
   "name": "URL短縮ツール for Amazon",
-  "version": "1.0",
+  "version": "1.1",
   "description": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。",
   "manifest_version": 2,
   "default_locale":"ja",
