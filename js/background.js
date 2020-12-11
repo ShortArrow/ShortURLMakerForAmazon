@@ -25,7 +25,8 @@ chrome.runtime.onMessage.addListener(
 );
 
 function hello(url, callback) {
-    let fake = url.split("/");
+    let questionCheck = url.split("?");
+    let fake = questionCheck[0].split("/");
     let ASIN = "";
     let targetGP = fake.indexOf("gp");
     let targetDP = fake.indexOf("dp");
@@ -49,7 +50,7 @@ function hello(url, callback) {
     }
     else {
         let ShortURL = "https://www.amazon.co.jp/dp/" + ASIN;
-        callback(ShortURL);
+        callback("https://www.amazon.co.jp/dp/" + ASIN);
         // alert('「'+ShortURL+'」をクリップボードにコピーしました。');
     }
 }
