@@ -45,7 +45,7 @@ function hello(url, callback) {
         }
     }
     if (ASIN == "") {
-        callback(url);
+        callback(questionCheck[0]);
         alert('このページのURLは短縮出来ないようです。');
     }
     else {
