@@ -1,0 +1,8 @@
+./_locales
+./css
+./img
+./js
+./*.html
+./*.json
+./*.md
+./LICENSE
