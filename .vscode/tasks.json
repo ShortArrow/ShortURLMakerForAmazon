@@ -13,6 +13,25 @@
                 "'@ziplist.txt'"
             ],
             "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "delete",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "./Remove-Zip.ps1",
+                "./release/ShortURLMakerForAmazon.zip"
+            ]
+        },
+        {
+            "label": "release",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "delete",
+                "compress"
+            ],
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
