@@ -46,7 +46,7 @@ function hello(url, callback) {
     }
     if (ASIN == "") {
         callback(questionCheck[0]);
-        alert('このページのURLは短縮出来ないようです。');
+        alert(chrome.i18n.getMessage("app_display_text_cant_shortning"));
     }
     else {
         let ShortURL = castAsinToUrl(ASIN);

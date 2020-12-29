@@ -75,8 +75,12 @@
       "description": "Text for Back of copied status",
       "message": "」をクリップボードにコピーしました。"
    },
-   "app_config__localize_url" : {
+   "app_config__localize_url": {
       "description": "Localize URL for Amazon",
       "message": "www.amazon.co.jp"
+   },
+   "app_display_text_cant_shortning": {
+      "description": "Text for message of when cant shortening url",
+      "message": "このURLは短縮できないようです"
    }
 }
