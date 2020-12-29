@@ -49,8 +49,16 @@ function hello(url, callback) {
         alert('このページのURLは短縮出来ないようです。');
     }
     else {
-        let ShortURL = "https://"+chrome.i18n.getMessage("app_config__localize_url")+"/dp/" + ASIN;
-        callback("https://"+chrome.i18n.getMessage("app_config__localize_url")+"/dp/" + ASIN);
+        let ShortURL = castAsinToUrl(ASIN);
+        callback(castAsinToUrl(ASIN));
         // alert('「'+ShortURL+'」をクリップボードにコピーしました。');
     }
+}
+
+function castDomainToUrl(domain) {
+    return "https://" + domain
+}
+
+function castAsinToUrl(asin) {
+    return castDomainToUrl(chrome.i18n.getMessage("app_config__localize_url")) + "/dp/" + asin
 }
