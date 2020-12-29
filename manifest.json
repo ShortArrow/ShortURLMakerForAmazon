@@ -1,5 +1,5 @@
 {
-  "name": "URL短縮ツール for Amazon",
+  "name": "__MSG_manifest_appname__",
   "version": "1.2",
   "description": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。",
   "manifest_version": 2,
