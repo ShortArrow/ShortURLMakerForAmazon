@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
         chrome.declarativeContent.onPageChanged.addRules([{
             conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: { hostEquals: 'www.amazon.co.jp' },
+                pageUrl: { hostEquals: chrome.i18n.getMessage("app_config__localize_url") },
             })
             ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
@@ -49,8 +49,8 @@ function hello(url, callback) {
         alert('このページのURLは短縮出来ないようです。');
     }
     else {
-        let ShortURL = "https://www.amazon.co.jp/dp/" + ASIN;
-        callback("https://www.amazon.co.jp/dp/" + ASIN);
+        let ShortURL = "https://"+chrome.i18n.getMessage("app_config__localize_url")+"/dp/" + ASIN;
+        callback("https://"+chrome.i18n.getMessage("app_config__localize_url")+"/dp/" + ASIN);
         // alert('「'+ShortURL+'」をクリップボードにコピーしました。');
     }
 }

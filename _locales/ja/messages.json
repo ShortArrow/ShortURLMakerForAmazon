@@ -74,5 +74,9 @@
    "app_display_text_back": {
       "description": "Text for Back of copied status",
       "message": "」をクリップボードにコピーしました。"
+   },
+   "app_config__localize_url" : {
+      "description": "Localize URL for Amazon",
+      "message": "www.amazon.co.jp"
    }
 }
