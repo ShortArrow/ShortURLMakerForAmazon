@@ -9,7 +9,7 @@
    },
    "app_config__localize_url": {
       "description": "Localize URL for Amazon",
-      "message": "www.amazon.com"
+      "message": "www.amazon."
    },
    "app_display_text_cant_shortning": {
       "description": "Text for message of when cant shortening url",

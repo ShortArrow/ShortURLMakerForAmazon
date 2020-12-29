@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
         chrome.declarativeContent.onPageChanged.addRules([{
             conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: { hostEquals: chrome.i18n.getMessage("app_config__localize_url") },
+                pageUrl: { hostPrefix: chrome.i18n.getMessage("app_config__localize_url") },
             })
             ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
