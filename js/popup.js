@@ -3,16 +3,20 @@
 // found in the LICENSE file.
 
 'use strict';
-let ItemId=`CopyShortURL`
-  let ShortURL = document.getElementById(ItemId);
-  ShortURL.innerText = ItemId;
-  ShortURL.onclick = () => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+let ItemId = `CopyShortURL`
+let ShortURL = document.getElementById(ItemId);
+ShortURL.innerText = ItemId;
+ShortURL.onclick = () => {
+  chrome.tabs.query(
+    { active: true, currentWindow: true },
+    (tabs) => {
       chrome.tabs.executeScript(
         tabs[0].id,
-        { file : `js/contents.js`});
-    });
-  };
+        { file: `js/contents.js` }
+      );
+    }
+  );
+};
 
 
 

@@ -67,11 +67,11 @@
       "description": "Text for small link to the upload help",
       "message": "アップロードのヘルプ"
    },
-   "app_display_text_front" :{
+   "app_display_text_front": {
       "description": "Text for Front of copied status",
       "message": "「"
    },
-   "app_display_text_back" :{
+   "app_display_text_back": {
       "description": "Text for Back of copied status",
       "message": "」をクリップボードにコピーしました。"
    }
