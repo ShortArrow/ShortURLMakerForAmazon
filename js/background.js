@@ -51,7 +51,6 @@ function hello(url, callback) {
     else {
         let ShortURL = castAsinToUrl(ASIN);
         callback(castAsinToUrl(ASIN));
-        // alert('「'+ShortURL+'」をクリップボードにコピーしました。');
     }
 }
 
