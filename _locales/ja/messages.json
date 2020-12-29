@@ -1,72 +1,4 @@
 {
-   "app_config__app_config__label": {
-      "description": "Title for the section of the application that contains new app configuration settings.",
-      "message": "アプリケーション設定"
-   },
-   "app_config__app_name__help": {
-      "description": "Help text for the app configuration setting that controls the new application name.",
-      "message": "URL短縮ツール for Amazon"
-   },
-   "app_config__app_name__label": {
-      "description": "Title for the app configuration setting that controls the new application name.",
-      "message": "URL短縮ツール for Amazon"
-   },
-   "app_config__app_name__placeholder": {
-      "description": "Placeholder value for the new application name",
-      "message": "URL短縮ツール for Amazon"
-   },
-   "app_config__terms_of_service__help": {
-      "description": "Help text for the application configuration setting that determines the terms of service",
-      "message": "ユーザーがキオスクを使用する前に同意する必要がある利用規約。"
-   },
-   "app_config__terms_of_service__label": {
-      "description": "Title for the application configuration setting that determines the terms of service",
-      "message": "利用規約"
-   },
-   "app_config__terms_of_service__placeholder": {
-      "description": "Placeholder for the application configuration setting that determines the terms of service",
-      "message": "利用規約"
-   },
-   "app_config__version__help": {
-      "description": "Help text for the application configuration setting that controls the new application version number.",
-      "message": "Chrome ウェブストアに表示されるアプリのバージョン。"
-   },
-   "app_config__version__label": {
-      "description": "Title for the application configuration setting that controls the new application version number.",
-      "message": "バージョン"
-   },
-   "app_welcome_text_pt1": {
-      "description": "Homepage welcome text, part 1",
-      "message": "利用を開始するには、下の [アプリケーション設定] でアプリの属性（アプリのホームページ、ナビゲーション コントロール、タイムアウトなど）を指定してください。アプリのホームページの URL を入力した後は、このテキストはホームページに置き換えられます。"
-   },
-   "app_welcome_text_pt2": {
-      "description": "Homepage welcome text, part 2",
-      "message": "完了したら、アプリフォルダのコンテンツを圧縮してアプリをエクスポートします。"
-   },
-   "app_welcome_text_pt3": {
-      "description": "Homepage welcome text, part 3",
-      "message": "ご不明ながある場合は次をご覧ください。"
-   },
-   "app_welcome_title": {
-      "description": "Homepage header title",
-      "message": "URL短縮ツール for Amazon へようこそ"
-   },
-   "appname": {
-      "description": "Title of the Chrome App name. [CHAR LIMIT=44]",
-      "message": "URL短縮ツール for Amazon"
-   },
-   "appname_beta": {
-      "description": "Title of the Chrome App name. [CHAR LIMIT=44]",
-      "message": "URL短縮ツール for Amazon（ベータ版）"
-   },
-   "appname_dev": {
-      "description": "Title of the Chrome App name. [CHAR LIMIT=44]",
-      "message": "URL短縮ツール for Amazon（開発版）"
-   },
-   "upload_help_text": {
-      "description": "Text for small link to the upload help",
-      "message": "アップロードのヘルプ"
-   },
    "app_display_text_front": {
       "description": "Text for Front of copied status",
       "message": "「"
@@ -86,5 +18,9 @@
    "manifest_appname":{
       "description": "appname for manifest",
       "message": "URL短縮ツール for Amazon"
+   },
+   "manifest_description":{
+      "description": "description for manifest",
+      "message": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。"
    }
 }

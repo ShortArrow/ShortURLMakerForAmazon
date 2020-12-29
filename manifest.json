@@ -1,7 +1,7 @@
 {
   "name": "__MSG_manifest_appname__",
   "version": "1.2",
-  "description": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。",
+  "description": "__MSG_manifest_description__",
   "manifest_version": 2,
   "default_locale":"ja",
   "permissions": ["activeTab","declarativeContent"],
