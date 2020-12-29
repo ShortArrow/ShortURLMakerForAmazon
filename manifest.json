@@ -12,16 +12,16 @@
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "img/get_started16.png",
-      "32": "img/get_started32.png",
-      "48": "img/get_started48.png",
-      "128": "img/get_started128.png"
+      "16": "img/icon_size16.png",
+      "32": "img/icon_size32.png",
+      "48": "img/icon_size48.png",
+      "128": "img/icon_size128.png"
     }
   },
   "icons": {
-    "16": "img/get_started16.png",
-    "32": "img/get_started32.png",
-    "48": "img/get_started48.png",
-    "128": "img/get_started128.png"
+    "16": "img/icon_size16.png",
+    "32": "img/icon_size32.png",
+    "48": "img/icon_size48.png",
+    "128": "img/icon_size128.png"
   }
 }
