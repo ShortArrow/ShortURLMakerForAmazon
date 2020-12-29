@@ -4,7 +4,11 @@ chrome.runtime.sendMessage({
 },
     function (response) {
         if (response) {
-            alert(chrome.i18n.getMessage("app_display_text_front")+response+chrome.i18n.getMessage("app_display_text_back")+response);
+            alert(
+                chrome.i18n.getMessage("app_display_text_front") +
+                response +
+                chrome.i18n.getMessage("app_display_text_back")
+            );
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(response);
             }
