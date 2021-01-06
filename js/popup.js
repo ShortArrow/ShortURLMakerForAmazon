@@ -5,7 +5,7 @@
 'use strict';
 let ItemId = `CopyShortURL`
 let ShortURL = document.getElementById(ItemId);
-ShortURL.innerText = ItemId;
+ShortURL.innerText = chrome.i18n.getMessage("app_config__button_text_copy");
 ShortURL.onclick = () => {
   chrome.tabs.query(
     { active: true, currentWindow: true },

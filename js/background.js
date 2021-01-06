@@ -31,6 +31,7 @@ function hello(url, callback) {
     let targetGP = fake.indexOf("gp");
     let targetDP = fake.indexOf("dp");
     let targetPD = fake.indexOf("product");
+    let doaminname = fake[2];
     if (targetDP != -1) {
         ASIN = fake[targetDP + 1];
     }
@@ -49,8 +50,8 @@ function hello(url, callback) {
         alert(chrome.i18n.getMessage("app_display_text_cant_shortning"));
     }
     else {
-        let ShortURL = castAsinToUrl(ASIN);
-        callback(castAsinToUrl(ASIN));
+        let ShortURL = castAsinToUrl(ASIN,doaminname);
+        callback(castAsinToUrl(ASIN,doaminname));
     }
 }
 
@@ -58,6 +59,6 @@ function castDomainToUrl(domain) {
     return "https://" + domain
 }
 
-function castAsinToUrl(asin) {
-    return castDomainToUrl(chrome.i18n.getMessage("app_config__localize_url")) + "/dp/" + asin
+function castAsinToUrl(asin,domain) {
+    return castDomainToUrl(domain) + "/dp/" + asin
 }

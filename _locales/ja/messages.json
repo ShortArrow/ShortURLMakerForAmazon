@@ -11,9 +11,17 @@
       "description": "Localize URL for Amazon",
       "message": "www.amazon."
    },
+   "app_config__button_text_copy": {
+      "description": "Button text of copy function",
+      "message": "短縮URLをコピー"
+   },
    "app_display_text_cant_shortning": {
       "description": "Text for message of when cant shortening url",
       "message": "このURLは短縮できないようです"
+   },
+   "app_display_text_cant_use_clipboard": {
+      "description": "Text for message of when cant use clipboard",
+      "message": "拡張機能からクリップボードが使用できません"
    },
    "manifest_appname":{
       "description": "appname for manifest",

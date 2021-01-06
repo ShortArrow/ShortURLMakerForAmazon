@@ -11,6 +11,10 @@
       "description": "Localize URL for Amazon",
       "message": "www.amazon."
    },
+   "app_config__button_text_copy": {
+      "description": "Button text of copy function",
+      "message": "Copy short URL"
+   },
    "app_display_text_cant_shortning": {
       "description": "Text for message of when cant shortening url",
       "message": "This URL doesn't seem to be short."
@@ -18,6 +22,10 @@
    "manifest_appname":{
       "description": "appname for manifest",
       "message": "URL shortening tool for Amazon"
+   },
+   "app_display_text_cant_use_clipboard": {
+      "description": "Text for message of when cant use clipboard",
+      "message": "can't use clipboard from this extension"
    },
    "manifest_description":{
       "description": "description for manifest",
