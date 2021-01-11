@@ -25,20 +25,20 @@ chrome.runtime.onMessage.addListener(
 );
 
 function hello(url, callback) {
-    let questionCheck = url.split("?");
-    let fake = questionCheck[0].split("/");
+    let questionCutted = url.split("?");
+    let slicedURL = questionCutted[0].split("/");
     let ASIN = "";
-    let targetGP = fake.indexOf("gp");
-    let targetDP = fake.indexOf("dp");
-    let targetPD = fake.indexOf("product");
-    let doaminname = fake[2];
+    let targetGP = slicedURL.indexOf("gp");
+    let targetDP = slicedURL.indexOf("dp");
+    let targetPD = slicedURL.indexOf("product");
+    let doaminname = slicedURL[2];
     if (targetDP != -1) {
-        ASIN = fake[targetDP + 1];
+        ASIN = slicedURL[targetDP + 1];
     }
     else {
         if (targetGP != -1) {
             if (targetGP + 1 == targetPD) {
-                ASIN = fake[targetPD + 1];
+                ASIN = slicedURL[targetPD + 1];
             } else {
             }
         }
@@ -46,7 +46,7 @@ function hello(url, callback) {
         }
     }
     if (ASIN == "") {
-        callback(questionCheck[0]);
+        callback(questionCutted[0]);
         alert(chrome.i18n.getMessage("app_display_text_cant_shortning"));
     }
     else {
