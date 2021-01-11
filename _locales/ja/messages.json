@@ -1,11 +1,13 @@
 {
-   "app_display_text_front": {
+   "app_display_text": {
       "description": "Text for Front of copied status",
-      "message": "「"
-   },
-   "app_display_text_back": {
-      "description": "Text for Back of copied status",
-      "message": "」をクリップボードにコピーしました。"
+      "message": "「$URL$」をクリップボードにコピーしました。",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://www.amazon.jp/dp/XXXXXX"
+         }
+      }
    },
    "app_config__localize_url": {
       "description": "Localize URL for Amazon",
@@ -23,11 +25,11 @@
       "description": "Text for message of when cant use clipboard",
       "message": "拡張機能からクリップボードが使用できません"
    },
-   "manifest_appname":{
+   "manifest_appname": {
       "description": "appname for manifest",
       "message": "URL短縮ツール for Amazon"
    },
-   "manifest_description":{
+   "manifest_description": {
       "description": "description for manifest",
       "message": "AmazonのURLを短くすることが出来ます。ボタンを押すと、短くしたURLをクリップボードにコピーします。"
    }

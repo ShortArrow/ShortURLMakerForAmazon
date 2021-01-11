@@ -7,9 +7,7 @@ chrome.runtime.sendMessage({
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(response);
                 alert(
-                    chrome.i18n.getMessage("app_display_text_front") +
-                    response +
-                    chrome.i18n.getMessage("app_display_text_back")
+                    chrome.i18n.getMessage("app_display_text",response)
                 );
             }
             else {

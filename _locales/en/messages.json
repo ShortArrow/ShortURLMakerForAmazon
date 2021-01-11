@@ -1,11 +1,13 @@
 {
-   "app_display_text_front": {
+   "app_display_text": {
       "description": "Text for Front of copied status",
-      "message": "`"
-   },
-   "app_display_text_back": {
-      "description": "Text for Back of copied status",
-      "message": "' is copied to clipboard"
+      "message": "'%URL%' is copied to clipboard",
+      "placeholders": {
+         "url": {
+            "content": "$1",
+            "example": "https://www.amazon.jp/dp/XXXXXX"
+         }
+      }
    },
    "app_config__localize_url": {
       "description": "Localize URL for Amazon",
@@ -19,7 +21,7 @@
       "description": "Text for message of when cant shortening url",
       "message": "This URL doesn't seem to be short."
    },
-   "manifest_appname":{
+   "manifest_appname": {
       "description": "appname for manifest",
       "message": "URL shortening tool for Amazon"
    },
@@ -27,7 +29,7 @@
       "description": "Text for message of when cant use clipboard",
       "message": "can't use clipboard from this extension"
    },
-   "manifest_description":{
+   "manifest_description": {
       "description": "description for manifest",
       "message": "You can shorten the Amazon URL. Press the button to copy the shortened URL to the clipboard."
    }
