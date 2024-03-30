@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 "use strict";
 
-let ItemId = `CopyShortURL`;
+let ItemId = "CopyShortURL";
 let ShortURL = document.getElementById(ItemId);
 ShortURL.innerText = chrome.i18n.getMessage("app_config__button_text_copy");
 ShortURL.onclick = () => {
@@ -12,7 +12,7 @@ ShortURL.onclick = () => {
     (tabs) => {
       chrome.tabs.executeScript(
         tabs[0].id,
-        { file: `js/contents.js` },
+        { file: "js/contents.js" },
       );
     },
   );
