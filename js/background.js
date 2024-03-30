@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(
   function (request, sender, sendResponse) {
     switch (request.type) {
       case "url":
-        hello(request.text, sendResponse);
+        urlParser(request.text, sendResponse);
         break;
       default:
         console.log("Error: Unkown request.");
@@ -26,7 +26,7 @@ chrome.runtime.onMessage.addListener(
   },
 );
 
-function hello(url, callback) {
+function urlParser(url, callback) {
   let questionCutted = url.split("?");
   let slicedURL = questionCutted[0].split("/");
   let ASIN = "";
