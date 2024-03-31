@@ -1,16 +1,13 @@
 chrome.runtime.onInstalled.addListener(function () {
-  chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
-    chrome.declarativeContent.onPageChanged.addRules([{
-      conditions: [
-        new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {
-            hostPrefix: chrome.i18n.getMessage("app_config__localize_url"),
-          },
-        }),
-      ],
-      actions: [new chrome.declarativeContent.ShowPageAction()],
-    }]);
-  });
+  chrome.action.disable();
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  if (tab.url) {
+    chrome.action.enable(tabId);
+  }else{
+    chrome.action.disable(tabId);
+  }
 });
 
 chrome.runtime.onMessage.addListener(
@@ -18,10 +15,11 @@ chrome.runtime.onMessage.addListener(
     switch (request.type) {
       case "url":
         urlParser(request.text, sendResponse);
-        break;
+        return true;
       default:
         console.log("Error: Unkown request.");
         console.log(request);
+        return false;
     }
   },
 );
@@ -49,7 +47,6 @@ function urlParser(url, callback) {
     callback(questionCutted[0]);
     alert(chrome.i18n.getMessage("app_display_text_cant_shortning"));
   } else {
-    let ShortURL = castAsinToUrl(ASIN, doaminname);
     callback(castAsinToUrl(ASIN, doaminname));
   }
 }

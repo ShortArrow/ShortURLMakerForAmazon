@@ -10,10 +10,30 @@ ShortURL.onclick = () => {
   chrome.tabs.query(
     { active: true, currentWindow: true },
     (tabs) => {
-      chrome.tabs.executeScript(
-        tabs[0].id,
-        { file: "js/contents.js" },
+      chrome.runtime.sendMessage(
+        {
+          type: "url",
+          text: tabs[0].url,
+        }, function (response) {
+          if (response) {
+            chrome.tabs.sendMessage(
+              tabs[0].id,
+              {
+                type: "dialog",
+                text: response,
+              }, function (response) {
+                if (response) {
+                  console.log(response);
+                }
+              }
+            );
+            setTimeout(async function () {
+              await navigator.clipboard.writeText(response);
+            }, 1000);
+          }
+        },
       );
+      window.close();
     },
   );
 };
