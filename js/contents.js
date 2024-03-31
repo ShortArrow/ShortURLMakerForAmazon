@@ -78,10 +78,15 @@ chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.type == "dialog") {
       open(request.text);
+      sendResponse("dialog opened");
+      return true;
+    }
+    if (request.type == "close") 
+    {
       setTimeout(() => {
         close();
       }, 3000);
-      sendResponse("dialog opened and closed");
+      sendResponse("dialog closed");
       return true;
     }
   }

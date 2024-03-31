@@ -1,12 +1,11 @@
 {
   "name": "__MSG_manifest_appname__",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "__MSG_manifest_description__",
   "manifest_version": 3,
   "default_locale":"en",
   "permissions": [
     "activeTab",
-    "scripting",
     "clipboardWrite"
   ],
   "content_security_policy": {
