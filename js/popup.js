@@ -29,11 +29,21 @@ ShortURL.onclick = () => {
             );
             setTimeout(async function () {
               await navigator.clipboard.writeText(response);
-            }, 1000);
+              window.close();
+            }, 3000);
+            chrome.tabs.sendMessage(
+              tabs[0].id,
+              {
+                type: "close",
+              }, function (response) {
+                if (response) {
+                  console.log(response);
+                }
+              }
+            );
           }
         },
       );
-      window.close();
     },
   );
 };
