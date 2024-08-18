@@ -1,3 +1,7 @@
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const dialog = document.createElement("dialog");
 document.body.appendChild(dialog);
 const header = document.createElement("div");
@@ -74,18 +78,21 @@ function close() {
   overlay.style.display = "none";
 }
 
+overlay.addEventListener("click", () => {
+  close();
+  console.debug("overlay.addEventListener!!!!"); 
+});
+
 chrome.runtime.onMessage.addListener(
-  function(request, sender, sendResponse) {
+  async function (request, sender, sendResponse) {
     if (request.type == "dialog") {
       open(request.text);
       sendResponse("dialog opened");
       return true;
     }
-    if (request.type == "close") 
-    {
-      setTimeout(() => {
-        close();
-      }, 3000);
+    if (request.type == "close") {
+      await delay(100);
+      close();
       sendResponse("dialog closed");
       return true;
     }

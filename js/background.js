@@ -5,8 +5,10 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (tab.url) {
     chrome.action.enable(tabId);
+    console.debug("chrome.action.enable");
   }else{
     chrome.action.disable(tabId);
+    console.debug("chrome.action.disable");
   }
 });
 
@@ -15,16 +17,18 @@ chrome.runtime.onMessage.addListener(
     switch (request.type) {
       case "url":
         urlParser(request.text, sendResponse);
-        return true;
+        break;
       default:
-        console.log("Error: Unkown request.");
-        console.log(request);
-        return false;
+        console.error("Unkown request:",request);
     }
   },
 );
 
 function urlParser(url, callback) {
+  if (url == undefined) {
+    console.log("Error: url is undefined.");
+    return;
+  }
   let questionCutted = url.split("?");
   let slicedURL = questionCutted[0].split("/");
   let ASIN = "";
